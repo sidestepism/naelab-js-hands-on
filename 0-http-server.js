@@ -1,3 +1,5 @@
+// シンプルなHTTPサーバのサンプル
+
 // ライブラリを読み込む． http は組み込みライブラリ
 // ドキュメントはここ: http://nodejs.jp/nodejs.org_ja/api/http.html
 var http = require('http');
