@@ -55,22 +55,34 @@
       </div>
     </div>
 <script type="text/javascript">
+
 // この HTML をサーブしているサーバに，socket.io でも接続する．
 // 違うサーバであれば '/' の代わりに '49.212.129.143:8000' などやってみる．
 var socket = io('/');
 
+// connect イベント (接続に成功すると自動的に dispatch される) に
+// 対するリスナを記述
 socket.on('connect', function() {
-
+  // HTML部分の, id (#) が 'connectionState' である要素を探して，
+  // 中身を 'connected' に書き換える．
+  $('#connectionState').text('connected');
 });
 
+// サーバからの hello イベントに対するリスナを記述
 socket.on('hello', function(data) {
-
+  $('#clientId').text(data.clientId);
 });
 
+// HTML部分の, idが 'majide' である要素を探す (idの名前の前に # をつける) ，
+// "クリックする" というイベント (click )に対するリスナを定義する．
 $('#majide').on('click', function() {
   // この関数はクリックされたときに実行される．
+  alert('まじで');
 
+  // socket.io を通じてサーバに 'say' イベントを送る
+  socket.emit('say', {content: 'まじで'})
 });
+
 </script>
   </body>
 </html>
