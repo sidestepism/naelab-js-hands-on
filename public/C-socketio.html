@@ -60,15 +60,18 @@
 var socket = io('/');
 
 socket.on('connect', function() {
+  console.log('接続できた');
 
 });
 
 socket.on('hello', function(data) {
+  console.log('こんにちは');
 
 });
 
 $('#majide').on('click', function() {
   // この関数はクリックされたときに実行される．
+  console.emit('eventName', {});
 
 });
 </script>
