@@ -1,0 +1,25 @@
+{
+  "name": "naelab-handson",
+  "version": "1.0.0",
+  "description": "苗村研究室 JavaScript GUI ハンズオンセミナーのリポジトリです．",
+  "main": "0-hellojs.js",
+  "dependencies": {
+    "express": "^4.10.1",
+    "say": "^0.6.0",
+    "socket.io": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sidestepism/naelab-js-hands-on.git"
+  },
+  "author": "Ryohei FUSHIMI",
+  "license": "public domain",
+  "bugs": {
+    "url": "https://github.com/sidestepism/naelab-js-hands-on/issues"
+  },
+  "homepage": "https://github.com/sidestepism/naelab-js-hands-on"
+}
